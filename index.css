@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* =========================
+   INDEX.HTML PREMIUM CSS
+========================= */
+
+/* ===== GLOBAL FONT ===== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding-top: 80px; /* sesuaikan 70–100px */
+  padding: 0;
+  line-height: 1.6;
+  background: #fff3f3;
+  color: #000000;
+}
+
+/* ===== NAVBAR MERAH PREMIUM ===== */
+.navbar {
+  background: linear-gradient(90deg, #b30000, #ff4444);
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.6);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+
+.navbar .nav-link {
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar .nav-link:hover {
+  color: #ffd6d6;
+  text-shadow: 0 0 8px #fff;
+}
+
+/* ===== HERO PREMIUM ===== */
+.hero {
+  background: url("img/Rokok herbal min.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding-top: 120px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #ddd;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* ===== HERO BUTTON GLOW ===== */
+.hero .btn {
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 12px 30px;
+  margin-top: 15px;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 20px rgba(255, 0, 0, 0.4);
+}
+
+.hero .btn-light {
+  background: #fff;
+  color: #b30000;
+}
+
+.hero .btn-light:hover {
+  background: #ffd6d6;
+  color: #900;
+  box-shadow: 0 0 25px #ff0000, 0 0 40px #ff6666;
+  transform: translateY(-3px);
+}
+
+.hero .btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.hero .btn-outline-light:hover {
+  background: #ff4444;
+  border-color: #ff4444;
+  color: #fff;
+  box-shadow: 0 0 20px #ff0000;
+  transform: translateY(-3px);
+}
+
+/* ===== SECTION: Kenapa Memilih Kami ===== */
+section.py-5.bg-white {
+  background: #fff;
+  color: #222;
+  padding: 80px 20px;
+}
+
+.fitur-list li {
+  margin-bottom: 15px;
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fitur-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.fitur-list li strong {
+  color: #b30000;
+  font-weight: 700;
+}
+
+/* ===== CARD PRODUK UNGGULAN ===== */
+section.py-5.bg-light {
+  background: #f7f7f7;
+  padding: 80px 20px;
+}
+
+section.py-5.bg-light .card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(179,0,0,0.2);
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+section.py-5.bg-light .card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(179,0,0,0.35);
+}
+
+section.py-5.bg-light .card img {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+section.py-5.bg-light .card:hover img {
+  transform: scale(1.08);
+}
+
+section.py-5.bg-light .card-title {
+  font-weight: 700;
+  color: #b30000;
+  margin-top: 10px;
+}
+
+section.py-5.bg-light .card-text {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+section.py-5.bg-light .btn-primary {
+  background: linear-gradient(90deg,#b30000,#ff3333);
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+section.py-5.bg-light .btn-primary:hover {
+  background: linear-gradient(90deg,#ff4444,#b30000);
+  box-shadow: 0 5px 25px rgba(255,0,0,0.6);
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .fitur-list li {
+    margin: 10px 0;
+  }
+  section.py-5.bg-light .card {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+  }
+  section.py-5.bg-light .card img {
+    height: 200px;
+  }
+}
+
+/* ============================
+   FORM CONTAINER (WHITE)
+=============================== */
+.form-container {
+    background: #ffffff;     /* PUTIH */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    width: 95%;
+    margin: 25px auto;
+    color: #000000;
+    border: 1px solid #ddd;  /* garis halus */
+}
+
+/* ============================
+   FORM ROW
+=============================== */
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ============================
+   INPUT GROUP
+=============================== */
+.form-group {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #222;         /* hitam soft */
+}
+
+/* ============================
+   INPUT STYLE (BLACK INPUT)
+=============================== */
+input, select, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #1a1a1a;      /* hitam */
+    color: #ffffff;           /* teks putih */
+    font-size: 15px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #000;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+::placeholder {
+    color: #bbb;
+}
+
+.input-hint {
+    font-size: 13px;
+    margin-top: 4px;
+    color: #555;
+}
+
+/* ============================
+   CHECKBOX
+=============================== */
+.checkbox-group {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox-label {
+    cursor: pointer;
+    color: #000;
+}
+
+/* ============================
+   BUTTON GROUP
+=============================== */
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+}
+
+.btn-submit,
+.btn-clear {
+    padding: 12px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    flex: 1;
+    min-width: 120px;
+}
+
+/* Tombol Kirim - HITAM */
+.btn-submit {
+    background: #000;     /* hitam */
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background: #222;
+}
+
+/* Tombol Clear - PUTIH */
+.btn-clear {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.btn-clear:hover {
+    background: #f2f2f2;
+}
+
+/* ============================
+   FEEDBACK MESSAGE
+=============================== */
+.feedback-message {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    display: none;
+}
+
+.feedback-success {
+    background: #000;
+    color: #fff;
+}
+
+.feedback-error {
+    background: #ff3c3c;
+    color: #fff;
+}
+
+/* ============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
+
+/* footer */
+.footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.footer p {
+  margin-bottom: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer .social a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+/* form pemesanan */
+/* Default (Laptop / Desktop) */
+#form-pemesanan form {
+  width: 50%;
+}
+
+/* HP (max 576px) */
+@media (max-width: 576px) {
+  #form-pemesanan form {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+/* Konten */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+}
+
+.footer-box h4 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.footer-box p {
+  font-size: 14px;
+  margin: 4px 0;
+  opacity: 0.85;
+}
+
+/* SOSIAL MEDIA */
+.footer .social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.footer .social a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 4px;
+}
+
+
+/* Copyright */
+.footer .copyright {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+

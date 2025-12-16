@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami | Rokok Herbal Sandi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/Rokok Tea.png" width="40" alt="Logo" class="me-2">
+        Rokok Herbal Sandi
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+   <section id="kontak" class="py-5">
+  <div class="container">
+
+    <h2 class="text-center mb-4">hubungi kontak Kami</h2>
+
+         <div class="form-container">
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nama">
+                                <i class="fas fa-user"></i> Nama Lengkap
+                            </label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Email
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nomorhp">
+                                <i class="fas fa-phone"></i> Nomor HP
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="nomorhp" 
+                                name="nomorhp" 
+                                placeholder="08xxxxxxxxxx" 
+                                pattern="[0-9]+" 
+                                title="Hanya boleh mengisi angka"
+                                required>
+                            <small class="input-hint">Format: 08xxxxxxxxxx (hanya angka)</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tanggal">
+                                <i class="fas fa-calendar"></i> Tanggal Pengiriman Pesanan
+                            </label>
+                            <input type="date" id="tanggal" name="tanggal" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="jeniskelamin">
+                                <i class="fas fa-venus-mars"></i> Jenis Kelamin
+                            </label>
+                            <select id="jeniskelamin" name="jeniskelamin" required>
+                                <option value="">-- Pilih Jenis Kelamin --</option>
+                                <option value="lakilaki">Laki-Laki</option>
+                                <option value="perempuan">Perempuan</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="kategori">
+                                <i class="fas fa-tag"></i> Kategori
+                            </label>
+                            <select id="kategori" name="kategori" required>
+                                <option value="">-- Pilih Kategori --</option>
+                                <option value="umum">Umum</option>
+                                <option value="produk">Produk</option>
+                                <option value="kerjasama">Kerja Sama</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file">
+                            <i class="fas fa-paperclip"></i> Lampiran (Opsional)
+                        </label>
+                        <input type="file" id="file" name="file" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+                        <small class="input-hint">Format: JPG, PNG, PDF, DOC (Max 5MB)</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pesan">
+                            <i class="fas fa-comment-dots"></i> Pesan
+                        </label>
+                        <textarea 
+                            id="pesan" 
+                            name="pesan" 
+                            rows="5" 
+                            placeholder="Tulis pesan Anda di sini..." 
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="langganan" name="langganan" value="ya">
+                        <label for="langganan" class="checkbox-label">
+                            <i class="fas fa-bell"></i> Saya ingin menerima newsletter dan informasi promo.
+                        </label>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i> Kirim Pesan
+                        </button>
+                        <button type="button" class="btn btn-clear" onclick="clearForm()">
+                            <i class="fas fa-eraser"></i> Clear Data
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+  
+
+
+          <footer class="footer">
+  <div class="footer-content">
+    <!-- Jam Operasional -->
+    <div class="footer-box">
+      <h4>Jam Operasional</h4>
+      <p>Senin – Jumat : 08.00 – 21.00</p>
+      <p>Sabtu – Minggu : 09.00 – 22.00</p>
+    </div>
+
+  </div>
+
+  <!-- Sosial Media -->
+  <div class="social">
+  <a href="https://wa.me/6281779204174" target="" class="wa">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+  </a>
+
+  <a href="https://instagram.com/sndimftuh" target="" class="ig">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+
+  <a href="https://twitter.com/" target="" class="tw">
+    <i class="fab fa-twitter"></i> Twitter
+  </a>
+
+  <a href="https://facebook.com/sandimaftu" target="" class="fb">
+    <i class="fab fa-facebook-f"></i> Facebook
+  </a>
+
+  <a href="https://tiktok.com/@sandimaftu" target="" class="tt">
+    <i class="fab fa-tiktok"></i> TikTok
+  </a>
+<a href="mailto:sandimaftuh08@gmail.com" class="mail">
+  <i class="fas fa-envelope"></i> Email
+</a>
+
+</div>
+
+
+  <p class="copyright">
+    &copy; 2025 Rokok Herbal Sandi. Semua hak dilindungi.
+  </p>
+</footer>
+        
+           <!-- SCRIPT LOGIC FORM & KONTAK -->
+<script type="module" src="folder.js/folderr.js/kontak/from.js"></script>
+<script type="module" src="folder.js/folderr.js/kontak/newsletter.js"></script>
+
+<!-- SCRIPT UMUM KONTAK -->
+<script src="folder.js/folderr.js/kontak/kontak.js"></script>
+
+<!-- BOOTSTRAP (PALING AKHIR) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
